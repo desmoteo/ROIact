@@ -1,0 +1,44 @@
+// breakpoints
+$desktop: 1200px;
+$sm-desktop: 992px;
+$tablet: 768px;
+
+// fonts
+$base-font-family: 'Montserrat', arial, sans-serif;
+$base-font-weight: 300;
+$base-font-color: #333;
+
+// colors
+$white: #fff;
+$black: #000;
+
+// footer
+$footer-gradient-start-bg: #0065a6;
+$footer-gradient-end-bg: #06a9d7;
+$footer-fg: $white;
+
+// login
+$login-input-border-fg: #ccc;
+$login-input-focus-border-fg: #06a9d7;
+
+// navbar
+$navbar-user-icon-fg: #1865a6;
+$navbar-plus-icon-fg: #1865a6;
+$navbar-mobile-menu-bg: lighten(#5dd0e6, 30%);
+
+// station detail
+
+// network error
+$network-error-content-bg: rgba(255, 255, 255, .8);
+
+// toolbox
+$tool-bg: #fafafa;
+$tool-border-fg: #f0f0f0;
+$tool-draw-bg: #fafafa;
+$tool-draw-border-fg: #fafafa;
+$tool-draw-selected-bg: #fafafa;
+$tool-draw-selected-border-fg: #2185d0;
+$tool-help-bg: #abe2fb;
+
+// objects
+$object-selected-bg: #5dd0e6;

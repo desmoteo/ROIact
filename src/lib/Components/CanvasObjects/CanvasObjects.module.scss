@@ -1,0 +1,22 @@
+@import '../../Styles/variables';
+
+.objectslist {
+  background: $tool-bg;
+  border: 2px solid $tool-border-fg;
+  padding: 1rem;
+}
+
+.listitem {
+  background: $white !important;
+  cursor: pointer;
+  margin: .2rem 0;
+  padding: .5rem !important;
+}
+
+.selected {
+  background: $object-selected-bg !important;
+
+  span {
+    color: $white !important;
+  }
+}

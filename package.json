@@ -1,0 +1,67 @@
+{
+  "name": "roiact",
+  "version": "0.1.6",
+  "private": false,
+  "homepage": "https://github.com/desmoteo/ROIact",
+  "author": "Matteo Ferrabone",
+  "keywords": [
+    "react",
+    "components",
+    "ROI"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/desmoteo/ROIact"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "apisauce": "^1.1.1",
+    "connected-react-router": "^6.5.2",
+    "fabric": "^3.6.3",
+    "history": "^4.10.1",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
+    "rc-slider": "^9.2.4",
+    "react": "^16.10.2",
+    "react-app-polyfill": "^1.0.6",
+    "react-dom": "^16.10.2",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "react-sizeme": "^2.6.12",
+    "react-toastify": "^5.4.0",
+    "redux": "^4.0.4",
+    "redux-saga": "^1.1.1",
+    "redux-thunk": "^2.3.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.2",
+    "weather-icons-react": "^1.2.0"
+  },
+  "scripts": {
+    "dist": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

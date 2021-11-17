@@ -1,0 +1,14 @@
+@import '../../Styles/variables';
+
+.tool {
+  background: $tool-bg;
+  border: 2px solid $tool-border-fg;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.displayValue {
+  font-size: .8rem;
+  font-weight: bold;
+  text-align: center;
+}

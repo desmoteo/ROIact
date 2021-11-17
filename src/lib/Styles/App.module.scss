@@ -1,0 +1,25 @@
+@import './variables';
+
+.app {
+  color: $base-font-color;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  font-family: $base-font-family, arial, sans-serif;
+  font-size: 16px;
+  font-weight: $base-font-weight;
+  min-height: 100%;
+
+  > div + div {
+    flex-grow: 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $base-font-family, arial, sans-serif;
+  }
+}

@@ -1,0 +1,10 @@
+@mixin view {
+  display: flex;
+  flex-grow: 1;
+}
+
+@mixin flex-container-centered {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

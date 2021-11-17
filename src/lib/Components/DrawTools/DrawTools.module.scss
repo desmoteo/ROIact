@@ -1,0 +1,63 @@
+@import '../../Styles/variables';
+
+.tool {
+  //background: $tool-bg;
+  //border: 2px solid $tool-border-fg;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.mainrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.pointerIcon {
+  height: 18px !important;
+  width: 18px !important;
+}
+
+.helpIcon {
+  font-size: 10px !important;
+  margin-left: 6px !important;
+}
+
+.drawTool {
+  align-items: center;
+  background: $tool-draw-bg;
+  border: 2px solid $tool-draw-border-fg;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  margin: 0 2px;
+  padding: .2rem;
+  width: 40px;
+}
+
+.disabled {
+  opacity: .5 !important;
+}
+
+.drawToolSelected {
+  align-items: center;
+  background: $tool-draw-selected-bg;
+  border: 2px solid $tool-draw-selected-border-fg;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  margin: 0 2px;
+  padding: .2rem;
+  width: 40px;
+}
+
+.drawIcon {
+  height: 26px;
+  width: 26px;
+}
