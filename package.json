@@ -1,6 +1,6 @@
 {
   "name": "roiact",
-  "version": "0.1.21",
+  "version": "0.1.22",
   "private": false,
   "homepage": "https://github.com/desmoteo/ROIact",
   "author": "Matteo Ferrabone",
@@ -22,6 +22,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "apisauce": "^1.1.1",
+    "babel-plugin-react-css-modules": "^5.2.6",
     "connected-react-router": "^6.5.2",
     "fabric": "^3.6.3",
     "history": "^4.10.1",
