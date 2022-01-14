@@ -2,7 +2,6 @@ export const getResponseStringError = response => {
   if (response.data && response.data.error_description) {
     return response.data.error_description
   } else if (response.data) {
-    console.log(response)
     return 'Error: ' + response.originalError.message
   }
 
@@ -15,7 +14,7 @@ export const getResponseStringError = response => {
   }
 }
 
-export function getCookie (name) {
+export function getCookie(name) {
   var nameEQ = name + '='
   var ca = document.cookie.split(';')
   for (var i = 0; i < ca.length; i++) {
@@ -26,6 +25,6 @@ export function getCookie (name) {
   return null
 }
 
-export function deleteCookie (name) {
+export function deleteCookie(name) {
   document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;'
 }

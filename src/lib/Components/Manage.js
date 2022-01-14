@@ -65,7 +65,7 @@ class Manage extends Component {
                 console.log('OK')
                 //this.props.handleStartStop()
                 this.checkRunning(true)
-                
+
             }
             else {
                 console.log('ERROR')
@@ -89,7 +89,6 @@ class Manage extends Component {
         api.get('list.cgi').then((response) => {
             if (response.ok) {
                 console.log('OK')
-                console.log(response.data)
 
                 var parser = new DOMParser();
                 var xmlDoc = parser.parseFromString(response.data, "text/xml");
@@ -97,8 +96,7 @@ class Manage extends Component {
                 this.setState({ loading: false, running: elem.getAttribute('Status') === 'Running' })
                 elem.getAttribute('Status') === 'Running' ? this.props.handleStarted() : this.props.handleStopped();
                 console.log(elem.getAttribute('Status'))
-                if (update)
-                {
+                if (update) {
                     this.setState({ loading: false, ssSuccess: true })
                 }
             }
@@ -115,10 +113,8 @@ class Manage extends Component {
         cameraApi.post('info.cgi', "ip").then((response) => {
             if (response.ok) {
                 console.log('OK')
-                console.log(response.data)
 
                 this.setState({ loading: false, ip: response.data.ip, apiError: false })
-                console.log(response.data)
             }
             else {
                 console.log('ERROR')
@@ -152,7 +148,7 @@ class Manage extends Component {
                         icon='check'
                         success
                         header='Connected!'
-                        content={'IP info:'+this.state.ip}
+                        content={'IP info:' + this.state.ip}
                     />
                 </div>
                 <Message
@@ -180,24 +176,24 @@ class Manage extends Component {
                     <Accordion.Title active={activeIndex === 0} index={0} onClick={this.handleClick}>
                         <Icon name='dropdown' />
                         Start/Stop Plugin
-                        </Accordion.Title>
+                    </Accordion.Title>
                     <Accordion.Content active={activeIndex === 0}>
                         <p>
                             Start the plugin, then update the configuration and login information
-                            </p>
+                        </p>
                     </Accordion.Content>
 
                     <Accordion.Title active={activeIndex === 1} index={1} onClick={this.handleClick}>
                         <Icon name='dropdown' />
                         Client Configuration
-                        </Accordion.Title>
+                    </Accordion.Title>
                     <Accordion.Content active={activeIndex === 1}>
                         <p>
                             A Client configuration file should provide all necessary information for the client to connect to the server. <br />
-                            <br/>
-			    In case the OpenVPN server requires a client username/password authentication, 
-                            client configuration should include a "auth-user-pass /usr/local/packages/OpenVPNSetup/openvpn.pass" line 
-                            as shown below. Username and Password to be stored in /usr/local/packages/OpenVPNSetup/openvpn.pass should be provided in the following "Login" tab.  <br/>
+                            <br />
+                            In case the OpenVPN server requires a client username/password authentication,
+                            client configuration should include a "auth-user-pass /usr/local/packages/OpenVPNSetup/openvpn.pass" line
+                            as shown below. Username and Password to be stored in /usr/local/packages/OpenVPNSetup/openvpn.pass should be provided in the following "Login" tab.  <br />
                             <Segment>
                                 <pre> {`
 client
@@ -236,11 +232,11 @@ key-direction 1
                     <Accordion.Title active={activeIndex === 2} index={2} onClick={this.handleClick}>
                         <Icon name='dropdown' />
                         Login
-                        </Accordion.Title>
+                    </Accordion.Title>
                     <Accordion.Content active={activeIndex === 2}>
                         <p>
                             Set client autentication user/password
-                            </p>
+                        </p>
                     </Accordion.Content>
                 </Accordion>
 

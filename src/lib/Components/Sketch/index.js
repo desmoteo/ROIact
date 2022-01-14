@@ -26,6 +26,7 @@ const initLocalState = () => {
     ignoreSelectionCreated: false
   }
 }
+
 const s = initLocalState()
 
 /**
@@ -39,6 +40,7 @@ const Sketch = props => {
   const dispatch = useDispatch()
   const tools = useSelector(state => state.canvas.tools)
   const shapes = useSelector(state => state.canvas.shapes)
+  
   if (s.canvas) {
     s.canvas.setStoreShapes(shapes)
     s.canvas.setShapeMode(tools.mode)
@@ -132,6 +134,7 @@ const Sketch = props => {
   // DID MOUNT
   useEffect(() => {
     console.info('SKETCH', 'mounting')
+    dispatch(CanvasActions.initShapes(props.shapes))
     s.canvas = new Canvas('canvas', {
       opacity: tools.opacity,
       onShapeRemove: handleShapeRemove,

@@ -3,8 +3,6 @@ import { useSelector, useDispatch } from 'react-redux'
 import PropTypes from 'prop-types'
 import CanvasActions from '../../Redux/Canvas'
 import { Button, Icon } from 'semantic-ui-react'
-import { request } from '../../Services/Request'
-import { toast } from 'react-toastify'
 
 import styles from './SaveCanvasButton.module.scss'
 

@@ -19,7 +19,7 @@ const Toolbox = props => {
   const setSelectedMode = useCallback(value => dispatch(CanvasActions.setSelectedMode(value)), [])
 
   return (
-    <div style={{ 'text-align': '-webkit-center' }}>
+    <div style={{ textAlign: '-webkit-center' }}>
       <DrawTools style={{height: '110px'}}
                 onToolSelect={setSelectedTool}
                 selectedTool={selectedTool}

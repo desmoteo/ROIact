@@ -9,7 +9,7 @@ import { withLoader } from '../HOC/Loader'
 
 const ROIEditor = (props) => {
 
-    const [helpMessageIsOpen, setHelpMessageIsOpen] = useState(true)
+    const [helpMessageIsOpen, setHelpMessageIsOpen] = useState(true && props.help)
 
     const closeHelpMessage = useCallback(() => setHelpMessageIsOpen(false), [])
 
@@ -18,7 +18,7 @@ const ROIEditor = (props) => {
         <Segment raised>
             <div >
                 {helpMessageIsOpen && <Message info onDismiss={closeHelpMessage}>
-                    <Message.Header>Setup {process.env.REACT_APP_NAME} by defining the Regions of Interest (ROIs)</Message.Header>
+                    <Message.Header>Setup {props.label} by defining the Regions of Interest (ROIs)</Message.Header>
                     <Message.List>
                         <Message.Item>Use the drawing tools to draw rectangles and polygons for the ROIs.</Message.Item>
                         <Message.Item>Change ROI threshold and name by selecting the ROI in the list at the bottom of the page</Message.Item>

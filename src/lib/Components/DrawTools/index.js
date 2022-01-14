@@ -8,6 +8,8 @@ import InboundIcon from '../../Assets/img/inbound-icon.svg'
 import OutboundIcon from '../../Assets/img/outbound-icon.svg'
 import { Header, Image, Popup, Icon } from 'semantic-ui-react'
 import styles from './DrawTools.module.scss'
+import './DrawTools.module.css'
+
 import DrawHelpModal from '../DrawHelpModal'
 
 
@@ -21,9 +23,12 @@ const DrawTools = props => {
     mode => () => isDrawing ? null : props.onModeSelect(mode),
     [isDrawing]
   )
-  const drawToolStyle = tool =>
-    (props.selectedTool === tool ? styles.drawToolSelected : styles.drawTool) +
-    (isDrawing ? ' ' + styles.disabled : '')
+  const drawToolStyle = tool => {
+    var res = (props.selectedTool === tool ? styles.drawToolSelected : styles.drawTool) +
+      (isDrawing ? ' ' + styles.disabled : '')
+    return res
+  }
+
   const drawModeStyle = mode =>
     props.selectedMode === mode ? styles.drawToolSelected : styles.drawTool
 
@@ -33,7 +38,7 @@ const DrawTools = props => {
 
   return (
     <div>
-      <div  className={styles.tool}>
+      <div className={styles.tool}>
         <div className={styles.mainrow}>
           <div className={styles.col}>
             <Header as='h4'>
@@ -47,7 +52,7 @@ const DrawTools = props => {
                     inverted
                     circular
                     name='help'
-                    style={{ margin: 0 }}
+                    style={{ width: '18px', height: '18px', margin: 0 }}
                     link
                     onClick={openHelpModal}
                   />
@@ -65,6 +70,7 @@ const DrawTools = props => {
                   trigger={
                     <Image
                       src={CursorIcon}
+                      style={{ width: '26px', height: '26px', margin: '5px' }}
                       className={`${styles.drawIcon} ${styles.pointerIcon}`}
                     />
                   }
@@ -78,7 +84,8 @@ const DrawTools = props => {
                   inverted
                   content='Rectangle'
                   trigger={
-                    <Image src={RectangleIcon} className={styles.drawIcon} />
+                    <Image style={{ width: '26px', height: '26px', margin: '5px' }}
+                      src={RectangleIcon} styleName="drawIcon" />
                   }
                 />
               </div>
@@ -90,7 +97,8 @@ const DrawTools = props => {
                   inverted
                   content='Polygon'
                   trigger={
-                    <Image src={PolygonIcon} className={styles.drawIcon} />
+                    <Image style={{ width: '26px', height: '26px', margin: '5px' }}
+                      src={PolygonIcon} className={styles.drawIcon} />
                   }
                 />
               </div>
